@@ -12,4 +12,8 @@ suite('Extension Test Suite', () => {
 		assert.strictEqual(-1, [1, 2, 3].indexOf(5));
 		assert.strictEqual(-1, [1, 2, 3].indexOf(0));
 	});
+
+	test('Registers the Hanzi to Pinyin command', async () => {
+		await vscode.commands.executeCommand('extension.chinese-to-pinyin');
+	});
 });
